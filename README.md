@@ -1,1 +1,1 @@
-#This is my workshop practice file from course: Modern React with Redux.
+#This is my workshop practice file from Modern React with Redux.
