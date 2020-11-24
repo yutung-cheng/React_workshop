@@ -859,13 +859,13 @@ const profile = {
   department: 'Engineering'
 };
 
-// Solução 1
+// Solution 1
 function isEngineer(profile) {
   let { title, department } = profile;
   return title === 'Engineer' && department === 'Engineering';
 }
 
-// Solução 2
+// Solution 2
 function isEngineer({title, department}) {
   return title === 'Engineer' && department === 'Engineering';
 }
