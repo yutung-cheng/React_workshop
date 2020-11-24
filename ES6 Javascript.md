@@ -1,6 +1,9 @@
 # ES6 Javascript: The Compelete Developer's Guide
 
-## All the coding excercise
+All the coding excercise from `Stephen Grider`
+
+
+
 
 ## Section 2: The `forEach` Helper
 
