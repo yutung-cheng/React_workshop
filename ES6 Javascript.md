@@ -4,7 +4,7 @@
 
 ## Section 2: The `forEach` Helper
 
-Coding Excercise 1: Moving Away from For Loops
+### Coding Excercise 1: Moving Away from For Loops
 
 The code below is calling 'savePost' three times, but it is doing so using a for loop.  This implementation works, but the for loop makes it more challenging to understand the purpose of the function.  Rather than using a for loop, refactor the code below to instead use the forEach helper.
 
@@ -22,7 +22,7 @@ function handlePosts() {
 }
 ```
 
-### Answer:
+### Answer
 
 ```js
 function handlePosts() {
@@ -36,7 +36,7 @@ function handlePosts() {
 }
 ```
 
-Coding Excercise 2:Processing Values
+### Coding Excercise 2:Processing Values
 
 The array below contains an array of objects, each of which is a representation of an image.  Using the forEach helper, calculate the area of each image and store it in a new array called 'areas'.  The area of an image can be calculated as 'image.height * image.width'.
 
@@ -91,7 +91,7 @@ var images = [
 var heights = images.map(image=>image.height)
 ```
 
-Coding Excercise 4: Calculating Values with Map
+### Coding Excercise 4: Calculating Values with Map
 
 Using map, create a new array that contains the distance / time value from each trip.  In other words, the new array should contain the (distance / time) value.  Assign the result to the variable 'speeds'.
 
@@ -117,7 +117,7 @@ var trips = [
 var speeds = trips.map(trip => trip.distance / trip.time);
 ```
 
-Coding Excercise 5: Really Hard - Implementing 'Pluck'
+### Coding Excercise 5: Really Hard - Implementing 'Pluck'
 
 This is a hard one!
 Implement a 'pluck' function.  Pluck should accept an array and a string representing a property name and return an  array containing that property from each object. 
@@ -153,9 +153,9 @@ function pluck(array, property) {
 }
 ```
 
-## filter
+## The `filter` Helper
 
-Coding Excercise 6: Filtering Values
+### Coding Excercise 6: Filtering Values
 
 Filter the array of numbers using the filter helper, creating a new array that only contains numbers greater than 50.  Assign this new array to a variable called 'filteredNumbers'.  Don't forget to use the 'return' keyword in the function!
 
@@ -173,7 +173,7 @@ var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
 var filteredNumbers = numbers.filter(number => number > 50);
 ```
 
-Coding Excercise 7: Handling Permissions with Filter
+### Coding Excercise 7: Handling Permissions with Filter
 
 Filter the array of users, only returning users who have admin level access.  Assign the result to the variable 'filteredUsers'. Don't forget to use the 'return' keyword in the function!
 
@@ -203,7 +203,7 @@ var users = [
 var filteredUsers = users.filter(user => user.admin === true)
 ```
 
-Coding Excercise 8: Challenging! Implementing 'reject'.
+### Coding Excercise 8: Challenging! Implementing 'reject'.
 
 This is a hard one!  Create a function called 'reject'.  Reject should work in the opposite way of 'filter' - if a function returns 'true', the item should *not* be included in the new array.  Hint: you can reuse filter.
 
@@ -232,9 +232,9 @@ function reject(array, iteratorFunction) {
 }
 ```
 
-## find
+## The `find` Helper
 
-Coding Excercise 9: Finding Admin Users
+### Coding Excercise 9: Finding Admin Users
 
 Find the user in the users's array who is an admin.  Assign this user to the variable 'admin'.
 
@@ -260,7 +260,7 @@ var users = [
 var admin = users.find(user => user.admin === true)
 ```
 
-Coding Excercise 10: What's Your Balance?
+### Coding Excercise 10: What's Your Balance?
 
 Find the account with a balance of 12 and assign it to the variable 'account'.
 
@@ -286,7 +286,7 @@ var accounts = [
 var account = accounts.find(account => account.balance === 12);
 ```
 
-Coding Excercise 11: Really Challenging: Custom findWhere Helper
+### Coding Excercise 11: Really Challenging: Custom findWhere Helper
 
 This is a tough one!  The most common find operation is to an object that has a given property.  Rather than writing out a full function every time, it would be great if we has a shorthand syntax to find an object like this:
 
@@ -328,9 +328,9 @@ function findWhere(array, criteria) {
 }
 ```
 
-## every and some
+## The `every` and `some` Helper
 
-Coding Excercise 12: Finding Submitted Users
+### Coding Excercise 12: Finding Submitted Users
 
 Given an array of users, return 'true' if every user has submitted a request form.  Assign the result to the variable 'hasSumbmitted'.
 
@@ -357,7 +357,7 @@ var users = [
 var hasSubmitted = users.every(user=>user.hasSubmitted === true);
 ```
 
-Coding Excercise 13: In Progress Network Requests
+### Coding Excercise 13: In Progress Network Requests
 
 Given an array of network objects representing network requests, assign the boolean 'true' to the variable 'inProgress' if any network request has a 'status' of 'pending'.
 
@@ -383,9 +383,9 @@ var requests = [
 var inProgress = requests.some(request => request.status === 'pending');
 ```
 
-## reduce
+## The `reduce` Helper
 
-Coding Excercise 14: Distance Traveled
+### Coding Excercise 14: Distance Traveled
 
 Use the 'reduce' helper to find the sum of all the distances traveled.  Assign the result to the variable 'totalDistance'
 
@@ -403,7 +403,7 @@ var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
 var totalDistance = trips.reduce((sum,trip) => { return sum + trip.distance}, 0);
 ```
 
-Coding Excercise 15: Reducing Properties
+### Coding Excercise 15: Reducing Properties
 
 Use the 'reduce' helper to create an object that tallies the number of sitting and standing desks.  The object returned should have the form '{ sitting: 3, standing: 2 }'.  The initial value has been provided to you.
 Hint: Don't forget to return the accumulator object (the first argument to the iterator function)
@@ -440,7 +440,7 @@ var deskTypes = desks.reduce(function(previous, desk) {
  }, { sitting: 0, standing: 0 });
 ```
 
-Coding Excercise 16: Hardmode: Custom 'Unique' Helper
+### Coding Excercise 16: Hardmode: Custom 'Unique' Helper
 
 Another really hard one!  Write a function called 'unique' that will remove all the duplicate values from an array.
 
@@ -469,14 +469,14 @@ function unique(array) {
 }
 ```
 
-## const and let
+## `const`/`let`
 
-A Constant Exercise of Letting Variables Be Variables
+### Coding Excercise 17: A Constant Exercise of Letting Variables Be Variables
 
 Imagine that you are building an application to manage a user's Facebook profile.  A profile might have a 'name', 'age', and 'dateOfBirth'.
 Declare three variables with these same names, making sure to use 'const' or 'let' depending on whether you expect the value to change over time.
 
-### Result
+### Answer
 
 ```js
 const name = 'Juliano';
@@ -484,7 +484,7 @@ let age = 24;
 const dateOfBirth = '14/08/1992';
 ```
 
-Const/Let Refactoring
+### Coding Excercise 18: Const/Let Refactoring
 
 The following code uses 'var' instead of 'const' and 'let'. Refactor the function to use the new keywords.  Be sure to consider whether the variable should be declared using 'const' or 'let' depending on whether the variable gets reassigned or not.
 
@@ -504,7 +504,7 @@ for (var i = 0; i < statuses.length; i++) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 const statuses = [ 
@@ -524,7 +524,7 @@ for (let i = 0; i < statuses.length; i++) {
 
 ## Template Strings
 
-Template Strings in Practice
+### Coding Excercise 19: Template Strings in Practice
 
 Refactor the function to use template strings
 
@@ -534,7 +534,7 @@ function doubleMessage(number) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function doubleMessage(number) {
@@ -542,7 +542,7 @@ function doubleMessage(number) {
 }
 ```
 
-Name Helpers
+### Coding Excercise 20: Name Helpers
 
 Refactor the function to use template strings
 
@@ -552,7 +552,7 @@ function fullName(firstName, lastName) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function fullName(firstName, lastName) {
@@ -562,7 +562,7 @@ function fullName(firstName, lastName) {
 
 ## Arrow function
 
-Refactoring Keyword Functions
+### Coding Excercise 21: Refactoring Keyword Functions
 
 The function below uses the 'function' keyword.  There's nothing wrong with using the 'function' keyword here, but it might look a bit nicer if we refactor it to use the fat arrow syntax instead.  
 
@@ -578,7 +578,7 @@ const fibonacci = function(n) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 const fibonacci = n => {
@@ -587,7 +587,7 @@ const fibonacci = n => {
 }
 ```
 
-Arrow Functions Aren't Always a Solution
+### Coding Excercise 22: Arrow Functions Aren't Always a Solution
 
 Arrow functions bind the value of 'this' to the surrounding context, and sometimes this isn't the behavior we expect.  The code below has an object that represents a users profile.  The profile has a 'name' currently.  Add another key to this object called 'getName'.  'getName' should be a function that returns the profiles name, using 'this.name'.  Does the solution work with a fat arrow function or will you have to use a function keyword instead?
 
@@ -597,7 +597,7 @@ const profile = {
 };
 ```
 
-### Result
+### Answer
 
 ```js
 const profile = {
@@ -613,7 +613,7 @@ _The keyword 'this' is a reference to the functions outer lexical environment...
 
 ## Enhanced Object Literals
 
-Multiple Properties with Enhanced Notation
+### Coding Excercise 23: Multiple Properties with Enhanced Notation
 
 Refactor to use enhanced literal notation
 
@@ -624,7 +624,7 @@ const blue = '#0000ff';
 const COLORS = { red: red, blue: blue };
 ```
 
-### Result
+### Answer
 
 ```js
 const red = '#ff0000';
@@ -633,7 +633,7 @@ const blue = '#0000ff';
 const COLORS = { red, blue };
 ```
 
-Condensing Code with Enhanced Literals
+### Coding Excercise 24: Condensing Code with Enhanced Literals
 
 Refactor the following to use enhance object literal syntax
 
@@ -643,7 +643,7 @@ const fields = ['firstName', 'lastName', 'phoneNumber'];
 const props = { fields: fields };
 ```
 
-### Result
+### Answer
 
 ```js
 const fields = ['firstName', 'lastName', 'phoneNumber'];
@@ -651,7 +651,7 @@ const fields = ['firstName', 'lastName', 'phoneNumber'];
 const props = { fields };
 ```
 
-Literals in Functions
+### Coding Excercise 25: Literals in Functions
 
 Refactor to use enhanced literal notation
 
@@ -665,7 +665,7 @@ const canvasDimensions = function(width, initialHeight) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 const canvasDimensions = function(width, initialHeight) {
@@ -677,7 +677,7 @@ const canvasDimensions = function(width, initialHeight) {
 }
 ```
 
-Refactor to use enhanced literal notation
+### Coding Excercise 26: Refactor to use enhanced literal notation
 
 ```js
 const color = 'red';
@@ -693,7 +693,7 @@ const Car = {
 };
 ```
 
-### Result
+### Answer
 
 ```js
 const color = 'red';
@@ -711,7 +711,7 @@ const Car = {
 
 ## Default Function Arguments
 
-Using Default Arguments
+### Coding Excercise 27: Using Default Arguments
 
 Refactor the following code to use default function arguments.  Be sure to remove any unused code after you refactor it.
 
@@ -729,7 +729,7 @@ function sum(a, b) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function sum(a = 0, b = 0) {
@@ -737,7 +737,7 @@ function sum(a = 0, b = 0) {
 }
 ```
 
-Dumping Unused Code
+### Coding Excercise 28: Dumping Unused Code
 
 Refactor the following code to use default function arguments.  Be sure to remove any unused code after you refactor it.
 
@@ -753,7 +753,7 @@ function addOffset(style) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function addOffset(style = {}) {
@@ -765,7 +765,7 @@ function addOffset(style = {}) {
 
 ## Rest and Spread operators
 
-Many, Many Arguments
+### Coding Excercise 29: Many, Many Arguments
 
 Refactor the following function to use the rest operator.  Remember, an argument using the rest operator does *not* need to be called 'rest'.
 
@@ -779,7 +779,7 @@ function product(a, b, c, d, e) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function product(...numbers) {
@@ -791,7 +791,7 @@ function product(...numbers) {
 }
 ```
 
-Spreadin' Arrays
+### Coding Excercise 30: Spreadin' Arrays
 
 Refactor the following to use the spread operator.
 
@@ -801,7 +801,7 @@ function join(array1, array2) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function join(array1, array2) {
@@ -810,7 +810,7 @@ function join(array1, array2) {
 }
 ```
 
-Mixing Rest and Spread
+### Coding Excercise 31: Mixing Rest and Spread
 
 Refactor the following to use the only the rest operator
 
@@ -820,7 +820,7 @@ function unshift(array, a, b, c, d, e) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 function unshift(array, ...rest) {
@@ -831,7 +831,7 @@ function unshift(array, ...rest) {
 
 ## Desctructuring
 
-Destructuring in Practice
+### Coding Excercise 32: Destructuring in Practice
 
 The snippet of code below duplicates references to 'profile' inside of the 'isEngineer' function.  Perhaps we can reduce the amount of code used for referencing the 'title' and 'department' properties.  Refactor this code to use destructuring.  Can you get the body of the 'isEngineer' function down to a single line?
 
@@ -848,7 +848,7 @@ function isEngineer(profile) {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 const profile = {
@@ -870,7 +870,7 @@ function isEngineer({title, department}) {
 isEngineer(profile);
 ```
 
-Array Destructuring in Practice
+### Coding Excercise 33: Array Destructuring in Practice
 
 The 'classes' variable holds an array of arrays, where each array represents a single class that a student is enrolled in.  Convert this array of arrays into an array of objects, where each object has the keys 'subject', 'time', and 'teacher' and assign the result to 'classesAsObject.  Use array destructuring and the map helper.
 
@@ -892,7 +892,7 @@ const classesAsObject = classes.map((item) => {
 });
 ```
 
-### Result
+### Answer
 
 ```js
 const classes = [
@@ -908,7 +908,7 @@ const classesAsObject = classes.map(([subject, time, teacher]) => {
 classesAsObject;
 ```
 
-Recursion with Destructuring
+### Coding Excercise 34: Recursion with Destructuring
 
 This one is probably the hardest exercise in the entire course!  
 
@@ -956,7 +956,7 @@ function double() {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 const numbers = [1, 2, 3];
@@ -975,7 +975,7 @@ function double(numbers) {
 
 ## Classes
 
-Game Classes
+### Coding Excercise 35: Game Classes
 
 You are a game developer tasked with setting up some basic classes for a new game you are working on.  Create a class called 'Monster'.  In the constructor, you'll need to do some basic setup for Monster whenever they are created. 
 
@@ -988,7 +988,7 @@ class Monster {
 }
 ```
 
-### Result
+### Answer
 
 ```js
 class Monster {
@@ -1002,7 +1002,7 @@ const monster = new Monster({ name: 'Jade' });
 monster;
 ```
 
-Subclassing Monsters
+### Coding Excercise 36: Subclassing Monsters
 
 Now that you have a monster created, create a subclass of the Monster called Snake.  
 
@@ -1023,7 +1023,7 @@ class Snake {
 ```
 
 
-### Result
+### Answer
 
 ```js
 class Monster {
