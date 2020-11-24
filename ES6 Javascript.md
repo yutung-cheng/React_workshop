@@ -153,7 +153,7 @@ function pluck(array, property) {
 }
 ```
 
-## The `filter` Helper
+## Section 4: The `filter` Helper
 
 ### Coding Excercise 6: Filtering Values
 
@@ -232,7 +232,7 @@ function reject(array, iteratorFunction) {
 }
 ```
 
-## The `find` Helper
+## Section 5: The `find` Helper
 
 ### Coding Excercise 9: Finding Admin Users
 
@@ -328,7 +328,7 @@ function findWhere(array, criteria) {
 }
 ```
 
-## The `every` and `some` Helper
+## Section 6: The `every` and `some` Helper
 
 ### Coding Excercise 12: Finding Submitted Users
 
@@ -383,7 +383,7 @@ var requests = [
 var inProgress = requests.some(request => request.status === 'pending');
 ```
 
-## The `reduce` Helper
+## Section 7: The `reduce` Helper
 
 ### Coding Excercise 14: Distance Traveled
 
@@ -469,7 +469,7 @@ function unique(array) {
 }
 ```
 
-## `const`/`let`
+## Section 8: `const`/`let`
 
 ### Coding Excercise 17: A Constant Exercise of Letting Variables Be Variables
 
@@ -522,7 +522,7 @@ for (let i = 0; i < statuses.length; i++) {
 }
 ```
 
-## Template Strings
+## Section 9: Template Strings
 
 ### Coding Excercise 19: Template Strings in Practice
 
@@ -560,7 +560,7 @@ function fullName(firstName, lastName) {
 }
 ```
 
-## Arrow function
+## Section 10: Arrow function
 
 ### Coding Excercise 21: Refactoring Keyword Functions
 
@@ -611,7 +611,7 @@ profile.getName();
 ```
 _The keyword 'this' is a reference to the functions outer lexical environment...it points to the object that contains, and invokes, the function. However, if the function is inside another function, as it is with the 'map' helper, it will not point to the containing object, but instead points to the window object. Many consider it to be a bug of JavaScript, which is why they implemented the arrow function syntax. When using arrow function syntax, the 'this' keyword points to the containing object as expected._
 
-## Enhanced Object Literals
+## Section 11: Enhanced Object Literals
 
 ### Coding Excercise 23: Multiple Properties with Enhanced Notation
 
@@ -709,7 +709,7 @@ const Car = {
 };
 ```
 
-## Default Function Arguments
+## Section 12: Default Function Arguments
 
 ### Coding Excercise 27: Using Default Arguments
 
@@ -763,7 +763,7 @@ function addOffset(style = {}) {
 }
 ```
 
-## Rest and Spread operators
+## Section 13: Rest and Spread operators
 
 ### Coding Excercise 29: Many, Many Arguments
 
@@ -829,7 +829,7 @@ function unshift(array, ...rest) {
 }
 ```
 
-## Desctructuring
+## Section 14: Desctructuring
 
 ### Coding Excercise 32: Destructuring in Practice
 
@@ -973,7 +973,7 @@ function double(numbers) {
 }
 ```
 
-## Classes
+## Section 15: Classes
 
 ### Coding Excercise 35: Game Classes
 
